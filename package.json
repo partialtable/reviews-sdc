@@ -1,0 +1,34 @@
+{
+  "name": "reviews-sdc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "seed-users" : "node arango/seeding/users.js",
+    "seed-res" : "node arango/seeding/restaurant-1.js",
+    "seed-res-1" : "node arango/seeding/restaurant-2.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/partialtable/reviews-sdc.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/partialtable/reviews-sdc/issues"
+  },
+  "homepage": "https://github.com/partialtable/reviews-sdc#readme",
+  "dependencies": {
+    "arangojs": "^7.1.0",
+    "axios": "^0.20.0",
+    "body-parser": "^1.19.0",
+    "child_process": "^1.0.2",
+    "colors": "^1.4.0",
+    "csv-write-stream": "^2.0.0",
+    "express": "^4.17.1",
+    "faker": "^5.1.0",
+    "flatted": "^3.1.0",
+    "nodemon": "^2.0.6",
+    "path": "^0.12.7"
+  }
+}
