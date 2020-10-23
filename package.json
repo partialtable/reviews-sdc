@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start" : "nodemon server/index.js",
     "seed-users" : "node arango/seeding/users.js",
     "seed-res" : "node arango/seeding/restaurant-1.js",
     "seed-res-1" : "node arango/seeding/restaurant-2.js",

@@ -12,8 +12,10 @@ const edge = db.collection('edge');
 
 //Export
 module.exports = {
+  db,
   users,
   restaurants,
   reviews,
-  edge
+  edge,
+  aql
 }
