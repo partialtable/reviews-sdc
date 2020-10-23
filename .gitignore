@@ -1,0 +1,4 @@
+*.csv
+node_modules
+arango/config.js
+arango/seeding/seedingConfig.js
