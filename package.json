@@ -11,8 +11,9 @@
     "seed-rev-1" : "node arango/seeding/reviews-2.js",
     "seed-rev-2" : "node arango/seeding/reviews-3.js",
     "seed-rev-3" : "node arango/seeding/reviews-4.js",
-    "seed-edge-usr" : "node arango/seeding/edge-rev-to-usr-1.js",
-    "seed-edge-rev-1" : "node arango/seeding/edge-rev-to-usr-2.js"
+    "seed-edge-rev-usr" : "node arango/seeding/edge-rev-to-usr-1.js",
+    "seed-edge-rev-usr-1" : "node arango/seeding/edge-rev-to-usr-2.js",
+    "seed-edge-res-rev" : "node arango/seeding/edge-res-to-rev-1.js"
   },
   "repository": {
     "type": "git",

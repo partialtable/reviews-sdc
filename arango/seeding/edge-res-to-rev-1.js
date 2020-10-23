@@ -10,7 +10,7 @@ const exec = util.promisify(require('child_process').exec);
 const auth = require('./seedingConfig.js');
 
 //Counters
-let revId = 1;
+let resId = 1;
 
 //Main Script
 const main = async () => {
@@ -32,15 +32,15 @@ const main = async () => {
       else if (i === 2000000) { console.log(`\$$$$$$$$$_/`.rainbow); }
       else if (i === 2499999) { console.log(`\$$$$$$$$$$/`.rainbow); }
       //Write to CSV file
-      let randomUsr = 1 + Math.floor(Math.random() * 1499998);
-      let usr = `users/${randomUsr}`;
-      let rev = `reviews/${revId}`
+      let randomRev = 1 + Math.floor(Math.random() * 9999998);
+      let rev = `reviews/${randomRev}`;
+      let res = `restaurant/${resId}`;
       writer.write({
-        _to: usr,
-        _from: rev
+        _to: rev,
+        _from: res
       });
       //Increment Key
-      revId++;
+      resId++;
     }
     console.log(`CSV Generation complete, generated ${idKey} records.`.blue);
     console.log('Moving onto importing, please allow a few seconds to connect...'.blue);
@@ -71,26 +71,13 @@ const main = async () => {
     });
   }
 
-  //Run the next chain
-  const runNext = async () => {
-    try {
-      const { stdout, stderr } = await exec('npm run seed-edge-rev-usr-1');
-      console.log(`stdout --> ${stdout}`.green);
-      console.log(`stderr --> ${stderr}`.red);
-    } catch (err) {
-      console.log(err);
-    }
-  }
-
   //Generate CSV
   await genUserCSV();
   //Copy
   const imported = await importCSV();
   //Delete file
   const deleted = await deleteCSV();
-  //Move onto new docs
-  const next = await runNext();
-  if (imported && deleted && next) {
+  if (imported && deleted) {
     console.log('Seeding completed'.green);
   } else {
     console.log('ERR Check scripts'.red);
