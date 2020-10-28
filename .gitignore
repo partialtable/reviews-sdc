@@ -4,3 +4,4 @@ arango/config.js
 arango/import/seedingConfig.js
 newrelic.js
 *.log
+server/k6.js

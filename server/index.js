@@ -24,6 +24,11 @@ app.use(bodyParser.urlencoded({  extended: true }));
 //Set up port
 app.listen(PORT, () => console.log(`Listening @ ${PORT}`));
 
+app.use(express.static(path.join(__dirname, '../public/')));
+
+app.use(bodyParser.urlencoded({ extended: true}));
+app.use(bodyParser.json({limit: '50mb'}));
+
 //////////////////// GET ROUTES ///////////////////////////
 
 //Get a specific user
