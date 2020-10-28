@@ -1,4 +1,6 @@
 *.csv
 node_modules
 arango/config.js
-arango/seeding/seedingConfig.js
+arango/import/seedingConfig.js
+newrelic.js
+*.log

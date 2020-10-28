@@ -4,17 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start" : "nodemon server/index.js",
-    "seed-users" : "node arango/seeding/users.js",
-    "seed-res" : "node arango/seeding/restaurant-1.js",
-    "seed-res-1" : "node arango/seeding/restaurant-2.js",
-    "seed-rev" : "node arango/seeding/reviews-1.js",
-    "seed-rev-1" : "node arango/seeding/reviews-2.js",
-    "seed-rev-2" : "node arango/seeding/reviews-3.js",
-    "seed-rev-3" : "node arango/seeding/reviews-4.js",
-    "seed-edge-rev-usr" : "node arango/seeding/edge-rev-to-usr-1.js",
-    "seed-edge-rev-usr-1" : "node arango/seeding/edge-rev-to-usr-2.js",
-    "seed-edge-res-rev" : "node arango/seeding/edge-res-to-rev-1.js"
+    "start": "nodemon server/index.js",
+    "user-seed" : "node arango/import/users.js",
+    "restaurant-seed" : "node arango/import/restaurant.js",
+    "reviews-seed" : "node arango/import/reviews.js",
+    "edge-seed-reviews-users" : "node arango/import/edge-reviews-users.js",
+    "edge-seed-restaurant-reviews" : "node arango/import/edge-restaurant-reviews.js"
   },
   "repository": {
     "type": "git",
@@ -31,12 +26,15 @@
     "axios": "^0.20.0",
     "body-parser": "^1.19.0",
     "child_process": "^1.0.2",
+    "cluster": "^0.7.7",
     "colors": "^1.4.0",
     "csv-write-stream": "^2.0.0",
     "express": "^4.17.1",
     "faker": "^5.1.0",
     "flatted": "^3.1.0",
+    "newrelic": "^6.13.2",
     "nodemon": "^2.0.6",
+    "os": "^0.1.1",
     "path": "^0.12.7"
   }
 }
